@@ -3,7 +3,7 @@
 
   angular
   .module('Login', [])
-  .controller('loginCtrl', function($scope, $state,AuthService) {
+  .controller('loginCtrl', function($scope,$state,AuthService,CommonService) {
 
   //  var remember = localStorageService.get('remember');
     $scope.login = {
@@ -19,7 +19,7 @@
 
     $scope.loginPost = function() {
       AuthService.login($scope.login).then(function(user) {
-    //      CommonService.setProfile(user);
+          CommonService.setProfile(user);
           $state.go('main');
       }, function(errMsg) {
     /*    var alertPopup = $ionicPopup.alert({

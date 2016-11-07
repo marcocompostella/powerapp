@@ -1,12 +1,12 @@
 
-  <md-content layout="column" layout-align="start center" >
+  <md-content layout="column" layout-fill layout-align="start center" >
     <img src="http://placekitten.com/g/400/200" class="image">
     <ng-rate-it
       min = "0"
       max = "5"
       ng-model="model.resetable" resetable="false"></ng-rate-it>
 
-    <md-content >
+    <md-content ng-if="1==2">
       <md-card >
         <md-card-title>
           <md-card-title-text>
@@ -21,24 +21,25 @@
               status scheda
             </p>
         </md-card-content>
-        <md-card-actions layout="row" layout-align="end center">
+        <md-card-actions layout="row" layout-align="end end">
           <md-button>Action 1</md-button>
-          <md-button>Action 2</md-button>
         </md-card-actions>
       </md-card>
     </md-content>
-  </md-content>
-  <md-content layout="column" layout-align="end end" >
-      <md-fab-speed-dial class="md-scale" md-direction="up" md-open='false'>
-      <md-fab-trigger>
-        <md-button class="md-fab">
-          <ng-md-icon icon="play_arrow"></ng-md-icon>
-        </md-button>
-      </md-fab-trigger>
-      <md-fab-actions>
-        <md-button class="md-fab md-mini">
-          <ng-md-icon icon="build"></ng-md-icon>
-        </md-button>
-      </md-fab-actions>
+
+  <md-fab-speed-dial md-direction="up" md-open='false'
+              class="md-scale md-fab-bottom-right md-hover-full speed-dial" >
+    <md-fab-trigger>
+      <md-button class="md-fab">
+        <ng-md-icon icon="bubble_chart"></ng-md-icon>
+      </md-button>
+    </md-fab-trigger>
+    <md-fab-actions>
+      <md-button class="md-fab md-mini">
+        <ng-md-icon icon="play_arrow"></ng-md-icon>
+            <md-tooltip md-direction="left">Start training</md-tooltip>
+      </md-button>
+    </md-fab-actions>
   </md-fab-speed-dial>
+
 </md-content>

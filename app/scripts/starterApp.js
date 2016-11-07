@@ -39,15 +39,15 @@
   ]);
 
 
-      startApp.service('AuthService', ['$rootScope','$http', '$q', 'API_ENDPOINT','localStorageService',
-      AuthentificationService
-      ]);
+  startApp.service('AuthService', ['$rootScope','$http', '$q', 'API_ENDPOINT','localStorageService',
+    AuthentificationService
+  ]);
 
 
 
   startApp.controller('appCtrl', [
     'cordova', '$rootScope', '$scope','$mdSidenav', '$mdDialog', '$state',
-    'AuthService','AUTH_EVENTS',
+    'AuthService','CommonService','AUTH_EVENTS',
     '$timeout','$mdToast','$mdBottomSheet',
     AppController
   ]);

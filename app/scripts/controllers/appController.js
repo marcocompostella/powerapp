@@ -2,7 +2,7 @@
 
 
   function AppController(cordova,$rootScope,$scope,$mdSidenav,$mdDialog,$state,
-    AuthService,AUTH_EVENTS,
+    AuthService,CommonService,AUTH_EVENTS,
     $timeout,$mdToast,$mdBottomSheet) {
       var _self = this;
 
@@ -29,10 +29,9 @@
         TodoService.init();
         TurnService.init();
         RoomMngService.init();
-        CommonService.init();
         SettingService.init();
-        SettingService.getBusiness(setBisness);
-        _self.profile = CommonService.getProfile();*/
+        SettingService.getBusiness(setBisness);*/
+        CommonService.init();
         _self.selected =$state.current
       };
 
