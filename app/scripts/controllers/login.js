@@ -19,7 +19,7 @@
 
     $scope.loginPost = function() {
       AuthService.login($scope.login).then(function(user) {
-          CommonService.setProfile(user);
+          CommonService.setUser(user);
           $state.go('main');
       }, function(errMsg) {
     /*    var alertPopup = $ionicPopup.alert({

@@ -103,7 +103,6 @@ function AuthentificationService($rootScope, $http, $q, API_ENDPOINT,localStorag
   return {
     init: init,
     login: login,
-    register: register,
     logout: logout,
     isAuthenticated: function() { return isAuthenticated; },
   };

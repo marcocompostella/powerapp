@@ -3,7 +3,7 @@
   angular
   .module('Main', ['ngRateIt'])
   .controller('mainCtrl', function($scope){  })
-  .controller('dashCtrl',[ DashController]);
+  .controller('dashCtrl',['CommonService', DashController]);
 
 
 

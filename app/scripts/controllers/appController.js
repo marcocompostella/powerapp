@@ -32,7 +32,7 @@
         SettingService.init();
         SettingService.getBusiness(setBisness);*/
         CommonService.init();
-        _self.selected =$state.current
+        _self.selected = $state.current
       };
 
       AuthService.init(setAuthView, init);

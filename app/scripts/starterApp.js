@@ -43,6 +43,7 @@
     AuthentificationService
   ]);
 
+  startApp.service('CommonService', ['$http', '$q', 'API_ENDPOINT',CommonService ]);
 
 
   startApp.controller('appCtrl', [

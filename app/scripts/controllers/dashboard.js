@@ -3,7 +3,7 @@
 
   angular
   .module('Dashboard', [])
-  .controller('dashCtrl', function($scope) {
+  .controller('dashCtrl', function($scope, CommonService) {
 
             $scope.model = {
                 basic: 0,
@@ -17,5 +17,8 @@
                 callbacks: 5,
                 custom: 4,
             };
+
+            $scope.user = CommonService.getUser();
+
 
   });
