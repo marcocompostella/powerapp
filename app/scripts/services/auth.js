@@ -70,7 +70,7 @@ function AuthentificationService($rootScope, $http, $q, API_ENDPOINT,localStorag
 
   var login = function(user) {
     return $q(function(resolve, reject) {
-      $http.post(API_ENDPOINT.url + '/authenticate', user).then(function(result) {
+      $http.post(API_ENDPOINT.url + '/mobileAuth', user).then(function(result) {
         if (result.data.success) {
           storeUserCredentials(result.data.token);
           resolve(result.data.user);

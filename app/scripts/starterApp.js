@@ -43,7 +43,12 @@
     AuthentificationService
   ]);
 
+
+
   startApp.service('CommonService', ['$http', '$q', 'API_ENDPOINT',CommonService ]);
+
+
+    startApp.directive('camera', camera);
 
 
   startApp.controller('appCtrl', [
